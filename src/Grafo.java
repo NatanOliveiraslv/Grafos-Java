@@ -26,7 +26,7 @@ public class Grafo {
 
     public void adicionarAresta(int nodo1, int nodo2) {
         matriz[nodo1][nodo2] = 1;
-        if (!ehDigrafo){
+        if (!ehDigrafo) {
             matriz[nodo2][nodo1] = 1;
         }
     }
@@ -38,6 +38,37 @@ public class Grafo {
                 System.out.print(matriz[i][j] + " ");
             }
             System.out.println();
+        }
+    }
+
+    public void imprimiGrau() {
+        System.out.println("Grau dos vertice:\n");
+        if (!ehDigrafo) {
+            for (int i = 0; i < nodos; i++) {
+                int grau = 0;
+                for(int j = 0; j < nodos; j++){
+                    if (matriz[i][j] == 1) {
+                        grau++;
+                    }
+                }
+                System.out.println("Grau do " + i + "° vertice informado:\n" + "Grau: " + grau);
+                System.out.println();
+            }
+        } else {
+            for (int i = 0; i < nodos; i++) {
+                int entrada = 0;
+                int saida = 0;
+                for (int j = 0; j < nodos; j++) {
+                    if (matriz[i][j] == 1) {
+                        saida++;
+                    }
+                    if (matriz[j][i] == 1) {
+                        entrada++;
+                    }
+                }
+                System.out.println("Grau do " + i + "° vertice informado:\n" + "Entrada: " + entrada + "  Saída: " + saida);
+                System.out.println();
+            }
         }
     }
 
