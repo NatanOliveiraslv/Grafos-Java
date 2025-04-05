@@ -51,7 +51,7 @@ public class Grafo {
                         grau++;
                     }
                 }
-                System.out.println("Grau do " + i + "° vertice informado:\n" + "Grau: " + grau);
+                System.out.println("Grau do " + (i+1) + "° vertice informado:\n" + "Grau: " + grau);
                 System.out.println();
             }
         } else {
@@ -66,7 +66,7 @@ public class Grafo {
                         entrada++;
                     }
                 }
-                System.out.println("Grau do " + i + "° vertice informado:\n" + "Entrada: " + entrada + "  Saída: " + saida);
+                System.out.println("Grau do " + (i+1) + "° vertice informado:\n" + "Entrada: " + entrada + "  Saída: " + saida);
                 System.out.println();
             }
         }
